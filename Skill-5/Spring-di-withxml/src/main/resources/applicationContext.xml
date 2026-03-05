@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Course bean -->
+    <bean id="course" class="com.klu.Course"/>
+
+    <!-- Student bean with XML property injection -->
+    <bean id="student" class="com.klu.Student">
+        <property name="course" ref="course"/>
+    </bean>
+
+</beans>
